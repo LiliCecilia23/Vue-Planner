@@ -9,10 +9,11 @@ const gauthOption = {
   scope: 'profile email',
   prompt: 'select_account'
 }
-Vue.use(GoogleAuth, gauthOption);
-Vue.config.productionTip = false;
+
 const app = createApp(App)
 
+app.use(GoogleAuth, gauthOption);
+app.config.productionTip = false;
 app.use(createPinia())
 app.use(router)
 
